@@ -74,10 +74,10 @@ namespace zsummer
 
 
         /*
-            SessionManagerÊÇÒ»¸öµ¥Àısingleton, ÊÇÒ»¸ö¶ÔzsummerXµ×²ã½Ó¿ÚµÄ¸ß¼¶·â×°, Èç¹ûĞèÒª×Ô¼º·â×° Ôò¿ÉÒÔ²Î¿¼frameµÄ×ö·¨»òÕßexampleÖĞµÄÀı×Ó½øĞĞ·â×°»òÊ¹ÓÃ.
-            Õâ¸öµ¥ÀıÌá¹©ÁËËùÓĞÍøÂçµÄ¸ß¼¶µÄ¿É²Ù×÷½Ó¿Ú, ±ÈÈçÆô¶¯ÍøÂçÄ£¿éµ¥Àı, ¿ªÆôÍøÂçÑ­»·, ÒÀ´Î¹Ø±Õ²¿·ÖÍøÂç¹¦ÄÜ ×îºóÍË³öÍøÂçÑ­»·,  Ìí¼Ó¶à¸ö¼àÌı½Ó¿Ú, Ìí¼Ó¶à¸öÁ¬³ö, ·¢ËÍÊı¾İ,
-                ¿çÏß³ÌµÄÍ¨Öª»úÖÆpost, ´´½¨È¡Ïû¶¨Ê±Æ÷, »ñÈ¡Á¬½ÓĞÅÏ¢, ÉèÖÃ¶¨Ê±¼ì²â, ÉèÖÃ¶ÏÏßÖØÁ«´ÎÊıºÍ¼ä¸ô, ÉèÖÃÊÇ·ñÖ§³Öflash Policy, ÉèÖÃ×î´ó¿ÉÁ¬ÈëµÄÁ¬½ÓÊı, ÉèÖÃĞ­ÒéÊÇ¶ş½øÖÆµÄTCPĞ­Òé(proto4zĞ­ÒéÁ÷), 
-                ÉèÖÃĞ­ÒéÊÇHTTP(¿É×öWEB·şÎñÆ÷ºÍ¿Í»§¶ËÊ¹ÓÃ, ºÜ·½±ãµÄ×öÒ»Ğ©SDKÈÏÖ¤ºÍÆ½Ì¨½ÓÈë).
+            SessionManageræ˜¯ä¸€ä¸ªå•ä¾‹singleton, æ˜¯ä¸€ä¸ªå¯¹zsummerXåº•å±‚æ¥å£çš„é«˜çº§å°è£…, å¦‚æœéœ€è¦è‡ªå·±å°è£… åˆ™å¯ä»¥å‚è€ƒframeçš„åšæ³•æˆ–è€…exampleä¸­çš„ä¾‹å­è¿›è¡Œå°è£…æˆ–ä½¿ç”¨.
+            è¿™ä¸ªå•ä¾‹æä¾›äº†æ‰€æœ‰ç½‘ç»œçš„é«˜çº§çš„å¯æ“ä½œæ¥å£, æ¯”å¦‚å¯åŠ¨ç½‘ç»œæ¨¡å—å•ä¾‹, å¼€å¯ç½‘ç»œå¾ªç¯, ä¾æ¬¡å…³é—­éƒ¨åˆ†ç½‘ç»œåŠŸèƒ½ æœ€åé€€å‡ºç½‘ç»œå¾ªç¯,  æ·»åŠ å¤šä¸ªç›‘å¬æ¥å£, æ·»åŠ å¤šä¸ªè¿å‡º, å‘é€æ•°æ®,
+                è·¨çº¿ç¨‹çš„é€šçŸ¥æœºåˆ¶post, åˆ›å»ºå–æ¶ˆå®šæ—¶å™¨, è·å–è¿æ¥ä¿¡æ¯, è®¾ç½®å®šæ—¶æ£€æµ‹, è®¾ç½®æ–­çº¿é‡è²æ¬¡æ•°å’Œé—´éš”, è®¾ç½®æ˜¯å¦æ”¯æŒflash Policy, è®¾ç½®æœ€å¤§å¯è¿å…¥çš„è¿æ¥æ•°, è®¾ç½®åè®®æ˜¯äºŒè¿›åˆ¶çš„TCPåè®®(proto4zåè®®æµ), 
+                è®¾ç½®åè®®æ˜¯HTTP(å¯åšWEBæœåŠ¡å™¨å’Œå®¢æˆ·ç«¯ä½¿ç”¨, å¾ˆæ–¹ä¾¿çš„åšä¸€äº›SDKè®¤è¯å’Œå¹³å°æ¥å…¥).
         */
         class SessionManager
         {
@@ -88,30 +88,30 @@ namespace zsummer
             static SessionManager & getRef();
             inline static SessionManager * getPtr(){ return &getRef(); };
         public:
-            //ÒªÊ¹ÓÃSessionManager±ØĞëÏÈµ÷ÓÃstartÀ´Æô¶¯·şÎñ.
+            //è¦ä½¿ç”¨SessionManagerå¿…é¡»å…ˆè°ƒç”¨startæ¥å¯åŠ¨æœåŠ¡.
             bool start();
 
-            //ÍË³öÏûÏ¢Ñ­»·.
+            //é€€å‡ºæ¶ˆæ¯å¾ªç¯.
             void stop();
             
 
-            //×èÈûµ±Ç°Ïß³Ì²¢¿ªÊ¼ÏûÏ¢Ñ­»·. Ä¬ÈÏÑ¡ÓÃÕâ¸ö±È½ÏºÃ. µ±Ï£ÍûÓĞ¸üÏ¸Á¦¶ÈµÄ¿ØÖÆrunµÄÊ±ºòÍÆ¼öÊ¹ÓÃrunOnce
+            //é˜»å¡å½“å‰çº¿ç¨‹å¹¶å¼€å§‹æ¶ˆæ¯å¾ªç¯. é»˜è®¤é€‰ç”¨è¿™ä¸ªæ¯”è¾ƒå¥½. å½“å¸Œæœ›æœ‰æ›´ç»†åŠ›åº¦çš„æ§åˆ¶runçš„æ—¶å€™æ¨èä½¿ç”¨runOnce
             bool run();
             inline bool isRunning(){ return _running; }
 
-            //Ö´ĞĞÒ»´ÎÏûÏ¢´¦Àí, Èç¹ûisImmediatelyÎªtrue, ÔòÎŞÂÛµ±Ç°´¦ÀíÓĞÎŞÊı¾İ ¶¼ĞèÒªÁ¢¼´·µ»Ø, ¿ÉÒÔÇ¶Èëµ½ÈÎÒâÒ»¸öÏß³ÌÖĞÁé»îÊ¹ÓÃ
-            //Ä¬ÈÏÎªfalse,  Èç¹ûÃ»ÓĞÍøÂçÏûÏ¢ºÍÊÂ¼şÏûÏ¢ Ôò»á×èÈûÒ»Ğ¡¶ÎÊ±¼ä, ÓĞÏûÏ¢Í¨Öª»áÁ¢¿Ì±»»½ĞÑ.
+            //æ‰§è¡Œä¸€æ¬¡æ¶ˆæ¯å¤„ç†, å¦‚æœisImmediatelyä¸ºtrue, åˆ™æ— è®ºå½“å‰å¤„ç†æœ‰æ— æ•°æ® éƒ½éœ€è¦ç«‹å³è¿”å›, å¯ä»¥åµŒå…¥åˆ°ä»»æ„ä¸€ä¸ªçº¿ç¨‹ä¸­çµæ´»ä½¿ç”¨
+            //é»˜è®¤ä¸ºfalse,  å¦‚æœæ²¡æœ‰ç½‘ç»œæ¶ˆæ¯å’Œäº‹ä»¶æ¶ˆæ¯ åˆ™ä¼šé˜»å¡ä¸€å°æ®µæ—¶é—´, æœ‰æ¶ˆæ¯é€šçŸ¥ä¼šç«‹åˆ»è¢«å”¤é†’.
             bool runOnce(bool isImmediately = false);
 
             //handle: std::function<void()>
             //switch initiative, in the multi-thread it's switch call thread simultaneously.
-            //Í¶µİÒ»¸öhandlerµ½SessionManagerµÄÏß³ÌÖĞÈ¥´¦Àí, Ïß³Ì°²È«.
+            //æŠ•é€’ä¸€ä¸ªhandleråˆ°SessionManagerçš„çº¿ç¨‹ä¸­å»å¤„ç†, çº¿ç¨‹å®‰å…¨.
             template<class H>
             void post(H &&h){ _summer->post(std::move(h)); }
 
             //it's blocking call. support ipv6 & ipv4 .
             inline std::string getHostByName(const std::string & name) { return zsummer::network::getHostByName(name); }
-            //´´½¨¶¨Ê±Æ÷ µ¥Î»ÊÇºÁÃë ·ÇÏß³Ì°²È«.
+            //åˆ›å»ºå®šæ—¶å™¨ å•ä½æ˜¯æ¯«ç§’ éçº¿ç¨‹å®‰å…¨.
             template <class H>
             zsummer::network::TimerID createTimer(unsigned int delayms, H &&h, bool useSystemTime = true)
             { return _summer->createTimer(delayms, std::move(h), useSystemTime); }
@@ -120,7 +120,7 @@ namespace zsummer
             {
                 return _summer->createTimer(delayms, h, useSystemTime);
             }
-            //È¡Ïû¶¨Ê±Æ÷.  ×¢Òâ, Èç¹ûÔÚ¶¨Ê±Æ÷µÄ»Øµ÷handlerÖĞÈ¡Ïûµ±Ç°¶¨Ê±Æ÷ »áÊ§°ÜµÄ.
+            //å–æ¶ˆå®šæ—¶å™¨.  æ³¨æ„, å¦‚æœåœ¨å®šæ—¶å™¨çš„å›è°ƒhandlerä¸­å–æ¶ˆå½“å‰å®šæ—¶å™¨ ä¼šå¤±è´¥çš„.
             bool cancelTimer(unsigned long long timerID){ return _summer->cancelTimer(timerID); }
 
 
@@ -161,25 +161,25 @@ namespace zsummer
             std::queue<SessionBlock*> _freeBlock;
         private:
             friend class TcpSession;
-            // Ò»¸öestablished×´Ì¬µÄsessionÒÑ¾­¹Ø±Õ. 
+            // ä¸€ä¸ªestablishedçŠ¶æ€çš„sessionå·²ç»å…³é—­. 
             void removeSession(TcpSessionPtr session);
 
-            //acceptµ½ĞÂÁ¬½Ó.
+            //acceptåˆ°æ–°è¿æ¥.
             void onAcceptNewClient(zsummer::network::NetErrorCode ec, const TcpSocketPtr & s, const TcpAcceptPtr & accepter, AccepterID aID);
         private:
 
-            //ÏûÏ¢Ñ­»·
+            //æ¶ˆæ¯å¾ªç¯
             EventLoopPtr _summer;
 
-            //! ÒÔÏÂÒ»×é²ÎÊı¾ùÎª¿ØÖÆÏûÏ¢Ñ­»·µÄ¿ªÆôºÍ¹Ø±ÕÓÃµÄ
-            bool  _running = true;  //Ä¬ÈÏÊÇ¿ªÆô, ·ñÔò»áÔÚºÏÊÊµÄÊ±ºòÍË³öÏûÏ¢Ñ­»·.
+            //! ä»¥ä¸‹ä¸€ç»„å‚æ•°å‡ä¸ºæ§åˆ¶æ¶ˆæ¯å¾ªç¯çš„å¼€å¯å’Œå…³é—­ç”¨çš„
+            bool  _running = true;  //é»˜è®¤æ˜¯å¼€å¯, å¦åˆ™ä¼šåœ¨åˆé€‚çš„æ—¶å€™é€€å‡ºæ¶ˆæ¯å¾ªç¯.
 
-            //!ÒÔÏÂÒ»×éIDÓÃÓÚÉú³É¶ÔÓ¦µÄunique ID. 
+            //!ä»¥ä¸‹ä¸€ç»„IDç”¨äºç”Ÿæˆå¯¹åº”çš„unique ID. 
             AccepterID _lastAcceptID = InvalidAccepterID; //accept ID sequence. range  (0 - power(2,32))
             SessionID _lastSessionID = InvalidSessionID;//session ID sequence. range  (0 - __MIDDLE_SEGMENT_VALUE)
             SessionID _lastConnectID = InvalidSessionID;//connect ID sequence. range  (__MIDDLE_SEGMENT_VALUE - power(2,32))
 
-            //!´æ´¢µ±Ç°µÄÁ¬ÈëÁ¬³öµÄsessionĞÅÏ¢ºÍaccept¼àÌıÆ÷ĞÅÏ¢.
+            //!å­˜å‚¨å½“å‰çš„è¿å…¥è¿å‡ºçš„sessionä¿¡æ¯å’Œacceptç›‘å¬å™¨ä¿¡æ¯.
             std::unordered_map<SessionID, TcpSessionPtr> _mapTcpSessionPtr;
             std::unordered_map<AccepterID, AccepterOptions > _mapAccepterOptions;
         };
